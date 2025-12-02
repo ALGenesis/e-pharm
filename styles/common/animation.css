@@ -1,0 +1,53 @@
+/* Animations */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(40%);
+        filter: blur(5px)
+    };
+    50% {
+        opacity: 0.5;
+        transform: translateY(10%);
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+@keyframes fade-in-reverse {
+    0% {
+        opacity: 0;
+        transform: translateY(-40%);
+        filter: blur(5px)
+    };
+    50% {
+        opacity: 0.5;
+        transform: translateY(-10%);
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoom-in {
+    0% {
+        opacity: 0;
+        filter: blur(5px);
+        transform: scale(0.8);
+    };
+    50% {
+        opacity: 0.5;
+        filter: blur(2px);
+        transform: scale(0.9);
+    };
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,38 @@
+
+/* Contrôle de la quantité (+ / -) */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--gray-light);
+    border-radius: 5px;
+    overflow: hidden; /* Empêche les boutons de déborder de la bordure */
+}
+
+
+.quantity-btn {
+    background-color: var(--gray-white);
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.quantity-btn:hover {
+    background-color: var(--gray-light);
+}
+
+.quantity-input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    font-weight: 600;
+    appearance: textfield;
+    -moz-appearance: textfield; /* Cache les flèches du input number sur Firefox */
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Cache les flèches du input number sur Chrome/Safari */
+    margin: 0;
+}

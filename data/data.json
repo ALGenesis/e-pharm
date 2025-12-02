@@ -1,0 +1,97 @@
+[
+    {
+        "id" : 1,
+        "name" : "Test antigèniques",
+        "about" : "Boites de 25 tests",
+        "description" : "Test d'antigèniques pour la détection du SARS-CoV-2. Résultats en 15 minutes. Facile à utiliser, idéal pour un usage domestique ou en milieu professionnel.",
+        "price" : 20000,
+        "image" : "../assets/img/test-antigenique-sejoy-face-C.png"
+    },
+    {
+        "id" : 2,
+        "name" : "Test PCR",
+        "about" : "Boites de 10 tests",
+        "description" : "Test PCR pour la détection du SARS-CoV-2. Haute sensibilité et spécificité. Résultats en 24-48 heures. Convient pour les voyages et les besoins médicaux.",
+        "price" : 50000,
+        "image" : "../assets/img/test-antigenique-sejoy-face-D-1024x1024.png"
+    },
+    {
+        "id" : 3,
+        "name" : "Test salivaires",
+        "about" : "Boites de 15 tests",
+        "description" : "Test salivaire pour la détection du SARS-CoV-2. Non invasif et facile à utiliser. Résultats en 30 minutes. Parfait pour les enfants et les personnes sensibles aux prélèvements nasaux.",
+        "price" : 30000,
+        "image" : "../assets/img/flowflex-face-A.png"
+    },
+    {
+        "id" : 4,
+        "name" : "Test combiné",
+        "about" : "Boites de 20 tests",
+        "description" : "Test combiné antigénique et PCR pour une détection complète du SARS-CoV-2. Résultats rapides et précis. Idéal pour les environnements à haut risque.",
+        "price" : 60000,
+        "image" : "../assets/img/test-trod-cystite.png"
+    }, {
+        "id" : 5,
+        "name" : "Seringue nasales",
+        "about" : "Boites de 30 seringues",
+        "description" : " Seringues nasales stériles pour prélèvement d'échantillons. Conçues pour un usage unique, elles garantissent la sécurité et l'hygiène lors des tests COVID-19.",
+        "price" : 25000,
+        "image" : "../assets/img/lot-serum-seringue.png"
+    },
+    {
+        "id" : 6,
+        "name" : "Test auto-administré",
+        "about" : "Boites de 12 tests",
+        "description" : "Test auto-administré pour la détection du SARS-CoV-2. Facile à utiliser à domicile avec des instructions claires. Résultats en 20 minutes.",
+        "price" : 22000,
+        "image" : "../assets/img/Serum-physiologique-Menu.png"
+    },
+    {
+        "id" : 7,
+        "name" : "Test sérologique",
+        "about" : "Boites de 8 tests",
+        "description" : "Test sérologique pour la détection des anticorps contre le SARS-CoV-2. Utile pour déterminer une exposition antérieure au virus. Résultats en 1 heure.",
+        "price" : 40000,
+        "image" : "../assets/img/masque-3m-ffp2.jpg.jpeg"
+    }, 
+    {
+        "id" : 8,
+        "name" : "Test rapide combiné",
+        "about" : "Boites de 18 tests",
+        "description" : "Test rapide combiné pour la détection simultanée du SARS-CoV-2 et des anticorps. Résultats en 15 minutes. Idéal pour un dépistage complet en un seul test.",
+        "price" : 55000,
+        "image" : "../assets/img/combo-grippe-covid-face-A-New-1024x369.png"
+    }, 
+    {
+        "id" : 9,
+        "name" : "Kit de prélèvement",
+        "about" : "Boites de 5 kits",
+        "description" : "Kit de prélèvement complet pour la collecte d'échantillons nasaux ou salivaires. Comprend tous les accessoires nécessaires pour un prélèvement sûr et efficace.",
+        "price" : 15000,
+        "image" : "../assets/img/Pochettes-SOS.png"
+    },
+    {
+        "id" : 10,
+        "name" : "Test multiplex",
+        "about" : "Boites de 14 tests",
+        "description" : "Test multiplex pour la détection simultanée de plusieurs virus respiratoires, y compris le SARS-CoV-2. Résultats rapides et précis pour un diagnostic complet.",
+        "price" : 70000,
+        "image" : "../assets/img/masque-chirurgical-type-ii-3-plis-a-elastiques-bleu-boite-de-50.jpg.jpeg"
+    },
+    {
+        "id" : 11,
+        "name" : "Test antigénique professionnel",
+        "about" : "Boites de 40 tests",
+        "description" : "Test antigénique professionnel pour la détection rapide du SARS-CoV-2. Conçu pour une utilisation en milieu clinique avec une haute précision. Résultats en 15 minutes.",
+        "price" : 80000,
+        "image" : "../assets/img/thermometre-2.png"
+    }, 
+    {
+        "id" : 12,
+        "name" : "Test PCR express",
+        "about" : "Boites de 6 tests",
+        "description" : "Test PCR express pour la détection rapide du SARS-CoV-2. Résultats en moins de 12 heures. Idéal pour les situations nécessitant une réponse rapide.",
+        "price" : 90000,
+        "image" : "../assets/img/Tests-Grippe-.png"
+    }
+]
