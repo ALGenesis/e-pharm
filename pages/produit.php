@@ -1,36 +1,43 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['user_id'])) {
+        header("Location: ../auth/connexion.php");
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/catalogue.css">
     <link rel="stylesheet" href="../styles/common/navbar.css">
     <link rel="stylesheet" href="../styles/common/product-card.css">
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/common/index.responsive.css">
     <link rel="stylesheet" href="../styles/common/animation.css">
-    <title>e-pharm | catalogue</title>
+    <link rel="stylesheet" href="../styles/produit.css">
+    <title>e-pharm | page produit</title>
 </head>
 <body>
     <script type="module" src="../script/menu-burger.js" defer></script>
-    <script type="module" src="../script/app/catalog.js"></script>
-    <script type="module" src="../script/utils/filterOptions.js"></script>
+    <script type="module" src="../script/app/product.js"></script>
     <!-- Header -->
     <header>
 
-        <a href="../index.html">
+        <a href="../index.php">
             <div class="logo">
                 <span>e-pharm</span>
             </div>
         </a>
 
         <nav class="navbar">
-            <li><a href="../index.html">Acceuil </a></li>
-            <li><a href="../pages/catalogue.html">Catalogue </a></li>
-            <li><a href="../pages/contact.html">Contact </a></li>
+            <li><a href="../index.php">Acceuil </a></li>
+            <li><a href="../pages/catalogue.php">Catalogue </a></li>
+            <li><a href="../pages/contact.php">Contact </a></li>
         </nav>
         <div class="flexed">
-            <a href="../pages/panier.html">
+            <a href="../pages/panier.php">
             <button>
                 Panier
             </button>
@@ -44,32 +51,50 @@
         </div>
     </header>
 
-    <!-- Main content -->
+    <!-- main content -->
     <main>
 
-        <section id="catalog-banner">
-            <div>
-                <h1 class="page-title">Découvrez notre catalogue</h1>
-                <div class="page-details">
-                    <!-- <p class="sub-title">Explorez une vaste sélection de produits pharmaceutiques, allant des médicaments essentiels aux soins de santé spécialisés. Notre catalogue est conçu pour répondre à tous vos besoins en matière de santé et de bien-être.</p> -->
+        <template id="product-page-template">
+            <section id="overview">
+            <div id="image">
+                <img id="img" src="../assets/img/combo-grippe-covid-face-B.png" alt="">
+            </div>
+
+            <div id="details">
+                <div>
+                <h2 id="name">Product name</h2>
+                <span class="badge">en stock</span>
                 </div>
-            </div>
-            <img src="../assets/img/mobile-slide2.png" class="banner-img" alt="">
-        </section>
 
-        <section id="product-catalog">
+                <h3 id="price">10.000 XAF</h3>
 
-            <div id="filter-n-search">
-                <form action="" id="filter-option">
-                <input type="search" name="search-params" id="search-params" placeholder="rechercher un produit">
-                <button type="submit">rechercher</button>
+                <div class="description">
+                    <span>Description</span>
+                    <p id="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi quod odit rerum mollitia iste reiciendis fuga nisi quasi voluptates sunt.</p>
+                </div>
+
+                <form action="">
+                    <div class="quantity">
+                        <label for="quantity-nbr">Nombre d'articles : </label>
+                        <input type="number" name="quantity-nbr" id="quantity-nbr" placeholder="1">
+                    </div>
+
+                    <button class="submit-btn">Ajouter au panier</button>
                 </form>
-            </div>
                 
-            <div id="product-list">
+            </div>
+        </section>
+        </template>
+
+        <section id="product-suggestion">
+
+            <h2 class="suggestion-title">Vos recommandations</h2>
+
+            <div id="product-suggested" class="product-slider flexed">
+
                 <template id="product-card-template">
                     <div class="product-card">
-                    <a href="../pages/produit.html" class="product-img">
+                    <a href="../pages/produit.php" class="product-img">
                         <img src="../assets/img/test-antigenique-sejoy-face-C.png" alt="">
                     </a>
 
@@ -85,8 +110,13 @@
                     <button class="add-to-cart-btn">Add to cart</button>
                 </div>
                 </template>
-                
-                   
+
+            </div>
+
+            <div class="btn-to-catalog">
+                <a href="../pages/catalogue.php">
+                    <button class="outline">Voir plus</button>
+                </a>
             </div>
         </section>
 
@@ -103,9 +133,9 @@
             <div class="footer-menu">
                 <span>Menu</span>
                 <ul>
-                <li><a href="">Acceuil</a></li>
-                <li><a href="">Catalogue</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="../index.php">Acceuil</a></li>
+                <li><a href="../pages/catalogue.php">Catalogue</a></li>
+                <li><a href="../pages/contact.php">Contact</a></li>
             </ul>
             </div>
 
@@ -138,6 +168,6 @@
         </div>
 
     </footer>
-    
+      
 </body>
 </html>

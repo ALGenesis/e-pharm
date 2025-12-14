@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['user_id'])) {
+        header("Location: ../auth/connexion.php");
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,19 +27,19 @@
     <!-- Header -->
     <header>
 
-        <a href="../index.html">
+        <a href="../index.php">
             <div class="logo">
                 <span>e-pharm</span>
             </div>
         </a>
 
         <nav class="navbar">
-            <li><a href="../index.html">Acceuil </a></li>
-            <li><a href="../pages/catalogue.html">Catalogue </a></li>
-            <li><a href="../pages/contact.html">Contact </a></li>
+            <li><a href="../index.php">Acceuil </a></li>
+            <li><a href="../pages/catalogue.php">Catalogue </a></li>
+            <li><a href="../pages/contact.php">Contact </a></li>
         </nav>
         <div class="flexed">
-            <a href="../pages/panier.html">
+            <a href="../pages/panier.php">
             <button>
                 Panier
             </button>
@@ -119,9 +127,9 @@
             <div class="footer-menu">
                 <span>Menu</span>
                 <ul>
-                <li><a href="../index.html">Acceuil</a></li>
-                <li><a href="../pages/catalogue.html">Catalogue</a></li>
-                <li><a href="../pages/contact.html">Contact</a></li>
+                <li><a href="../index.php">Acceuil</a></li>
+                <li><a href="../pages/catalogue.php">Catalogue</a></li>
+                <li><a href="../pages/contact.php">Contact</a></li>
             </ul>
             </div>
 

@@ -16,19 +16,19 @@
     <!-- Header -->
     <header>
 
-        <a href="./index.html">
+        <a href="./index.php">
             <div class="logo">
                 <span>e-pharm</span>
             </div>
         </a>
 
         <nav class="navbar">
-            <li><a href="/index.html">Acceuil </a></li>
-            <li><a href="./pages/catalogue.html">Catalogue </a></li>
-            <li><a href="./pages/contact.html">Contact </a></li>
+            <li><a href="/index.php">Acceuil </a></li>
+            <li><a href="./pages/catalogue.php">Catalogue </a></li>
+            <li><a href="./pages/contact.php">Contact </a></li>
         </nav>
         <div class="flexed">
-            <a href="./pages/panier.html">
+            <a href="./pages/panier.php">
             <button>
                 Panier
             </button>
@@ -52,13 +52,13 @@
 
             
                 <div class="btn-container">
-                    <a href="./pages/catalogue.html">
+                    <a href="./pages/catalogue.php">
                     <Button>
                         Voir le catalogue
                     </Button>
                     </a>
 
-                    <a href="./pages/contact.html">
+                    <a href="./pages/contact.php">
                     <Button class="outline">
                         Contacter
                     </Button>
@@ -83,7 +83,7 @@
             <div class="grid-bento">
                 <div class="grid-child">
                     <span class="category-name">Tests</span>
-                    <a href="./pages/catalogue.html" class="category-link">Voir plus</a>
+                    <a href="./pages/catalogue.php" class="category-link">Voir plus</a>
                     <img src="./assets/img/TEST-V1-1.png" alt="">
                 </div>
 
@@ -91,26 +91,26 @@
 
                 <div class="grid-child">
                     <span class="category-name">Masques</span>
-                    <a href="./pages/catalogue.html" class="category-link">Voir plus</a>
+                    <a href="./pages/catalogue.php" class="category-link">Voir plus</a>
                     <img src="./assets/img/MASQUES-V1.jpg.jpeg" alt="">
                 </div>
 
                 <div class="grid-child">
                     <span class="category-name">Gants</span>
-                    <a href="./pages/catalogue.html" class="category-link">Voir plus</a>
+                    <a href="./pages/catalogue.php" class="category-link">Voir plus</a>
                     <img src="./assets/img/GANTS-V1-2.png" alt="">
                 </div>
 
 
                 <div class="grid-child">
                     <span class="category-name">Consommables</span>
-                    <a href="./pages/catalogue.html" class="category-link">Voir plus</a>
+                    <a href="./pages/catalogue.php" class="category-link">Voir plus</a>
                     <img src="./assets/img/SACS-V1-1.png" alt="">
                 </div>
 
                 <div class="grid-child">
                     <span class="category-name">Bébé</span>
-                    <a href="./pages/catalogue.html" class="category-link">Voir plus</a>
+                    <a href="./pages/catalogue.php" class="category-link">Voir plus</a>
                     <img src="./assets/img/BEBES-V1-1.png" alt="">
                 </div>
 
@@ -132,7 +132,7 @@
 
                 <template id="product-card-template">
                     <div class="product-card">
-                    <a href="../pages/produit.html" class="product-img">
+                    <a href="../pages/produit.php" class="product-img">
                         <img src="../assets/img/test-antigenique-sejoy-face-C.png" alt="">
                     </a>
 
@@ -230,9 +230,9 @@
             <div class="footer-menu">
                 <span>Menu</span>
                 <ul>
-                <li><a href="./index.html">Acceuil</a></li>
-                <li><a href="./pages/catalogue.html">Catalogue</a></li>
-                <li><a href="./pages/contact.html">Contact</a></li>
+                <li><a href="./index.php">Acceuil</a></li>
+                <li><a href="./pages/catalogue.php">Catalogue</a></li>
+                <li><a href="./pages/contact.php">Contact</a></li>
             </ul>
             </div>
 
