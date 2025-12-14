@@ -1,7 +1,8 @@
 <?php
-    session_start();
+    require_once '../config/config.inc.php';
+    launchSession();
     if(!isset($_SESSION['user_id'])) {
-        header("Location: ../auth/connexion.php");
+        header("Location: ../auth/auth.php");
         exit();
     }
 ?>

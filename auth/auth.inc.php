@@ -1,5 +1,8 @@
 <?php
-session_start();
+
+
+require_once '../config/config.inc.php';
+launchSession();
 if (isset($_POST['login-form'])) {
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -16,17 +19,17 @@ if (isset($_POST['login-form'])) {
         if ($user && password_verify($_POST['password'], $user['password'])) {
             
             $_SESSION['user_id'] = $user['id'];
-            $_SESSION['user_email'] = $user['email'];
+
             header("Location: ../pages/catalogue.php");
             exit();
         } else {
-            $_SESSION['error_message'] = "Email ou mot de passe incorrect.";
+            $_SESSION['error_message'] = ['login' => "Email ou mot de passe incorrect."];
             header("Location: ../auth/connexion.php");
             exit();
         }
     } catch (PDOException $e) {
         error_log("Database error: " . $e->getMessage());
-        $_SESSION['error_message'] = 'Erreur serveur. Veuillez réessayer plus tard.';
+        $_SESSION['error_message'] = ['login' =>'Erreur serveur. Veuillez réessayer plus tard.'];
         header("Location: ../auth/connexion.php");
         exit();
     }
@@ -45,7 +48,7 @@ if(isset($_POST['register-form'])) {
         $stmt->bindParam(':email', $email);
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
-            $_SESSION['error_message'] = "Cet e-mail est déjà utilisé.";
+            $_SESSION['error_message'] = ['register' =>"Cet e-mail est déjà utilisé."];
             header("Location: ../auth/connexion.php");
             exit();
         }
@@ -58,19 +61,19 @@ if(isset($_POST['register-form'])) {
 
 
         $_SESSION['user_id'] = $pdo->lastInsertId();
-        $_SESSION['user_email'] = $email;
+
         header("Location: ../pages/catalogue.php");
         exit();
     } catch (PDOException $e) {
         error_log("Database error: " . $e->getMessage());
-        $_SESSION['error_message'] = 'Erreur serveur. Veuillez réessayer plus tard.';
+        $_SESSION['error_message'] = ['register' =>"Cet e-mail est déjà utilisé."];
         header("Location: ../auth/connexion.php");
         exit();
     }
 }
 
 if(isset($_POST['logout'])) {
-    session_start();
+    
     session_unset();
     session_destroy();
     header("Location: ../auth/connexion.php");

@@ -1,9 +1,15 @@
 <?php
-    session_start();
+    require_once '../config/config.inc.php';
+    launchSession();
+    if(isset($_SESSION['user_id'])) {
+        header('Location: ../index.php');
+    }
+
     if(isset($_SESSION['error_message'])) {
         $error_message = $_SESSION['error_message'];
         unset($_SESSION['error_message']);
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -13,7 +19,7 @@
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/common/index.responsive.css">
     <link rel="stylesheet" href="../styles/common/animation.css">
-    <link rel="stylesheet" href="../styles/auth/connexion.css">
+    <link rel="stylesheet" href="../styles/auth/auth.css">
     <title>e-pharm | contact</title>
 </head>
 <body>
@@ -22,11 +28,11 @@
     <main>
         <section>
             <div class="contact-container">
-                <form action="../includes/connexion.inc.php" method="post" id="login" class="contact-form active">
+                <form action="./auth.inc.php" method="post" id="login" class="contact-form active">
                         <h2 class="form-title">Connexion</h2>
                         <?php
-                            if(isset($error_message)) {
-                                echo '<div class="error-message">' . htmlspecialchars($error_message) . '</div>';
+                            if(isset($error_message['login'])) {
+                                echo '<div class="error-message">' . htmlspecialchars($error_message['login']) . '</div>';
                             }
                         ?>
                         <div class="input-field">
@@ -46,9 +52,13 @@
 
                 </form>
 
-                <form action="../includes/connexion.inc.php" method="post" id="register" class="contact-form ">
+                <form action="./auth.inc.php" method="post" id="register" class="contact-form ">
                         <h2 class="form-title">Inscription</h2>
-
+                        <?php
+                            if(isset($error_message['register'])) {
+                                echo '<div class="error-message">' . htmlspecialchars($error_message['register']) . '</div>';
+                            }
+                        ?>
                         <div class="input-field">
                             <label for="username">Votre nom</label>
                             <input type="text" name="username" placeholder="john doe" required>
