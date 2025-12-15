@@ -1,6 +1,6 @@
 <?php 
 const DB_HOST = 'localhost';
-const DB_NAME = 'epharm_test';
+const DB_NAME = 'epharm_db';
 
 $dsn = 'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4';
 $db_user = 'root';

@@ -1,9 +1,5 @@
 <?php
-    session_start();
-    if(!isset($_SESSION['user_id'])) {
-        header("Location: ../auth/auth.php");
-        exit();
-    }
+    require_once "../includes/utils/checkIfConnected.inc.php"
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +14,7 @@
     <link rel="stylesheet" href="../styles/common/index.responsive.css">
     <link rel="stylesheet" href="../styles/common/animation.css">
     <link rel="stylesheet" href="../styles/common/quantity-control.css">
+    <link rel="stylesheet" href="..styles/common/account-btn.css">
 </head>
 <body>
 
@@ -49,6 +46,20 @@
             <div class="flexed" id="menu-burger">
                 <img src="../assets/icons/menu-burger.svg" class="icon-md" id="menu-open" alt="">
                 <img src="../assets/icons/cross.svg" class="icon hidden" id="menu-close" alt="">
+            </div>
+
+            <div class="account-btn flexed" >
+                <img src="../assets/icons/settings.svg" class="icon" alt="">
+                <div class="floater">
+                    <div class="account-profile flexed">
+                        <img src="../assets/icons/settings.svg" class="icon" alt="">
+                    </div>
+                    <span>example@email.com</span>
+                    <form action="../includes/auth.inc.php" method="post">
+                        <button class="logout-btn" type="submit" name="logout">se déconnecter</button>
+                    </form>
+                    
+                </div>
             </div>
         </div>
     </header>

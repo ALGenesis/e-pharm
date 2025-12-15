@@ -1,13 +1,15 @@
 <?php
 
 
-require_once '../config/config.inc.php';
-launchSession();
+require_once './config/config.inc.php';
+
+
 if (isset($_POST['login-form'])) {
+
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    require_once '../config/db.inc.php';
+    require_once './config/db.inc.php';
 
     try {
         $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
@@ -24,13 +26,14 @@ if (isset($_POST['login-form'])) {
             exit();
         } else {
             $_SESSION['error_message'] = ['login' => "Email ou mot de passe incorrect."];
-            header("Location: ../auth/connexion.php");
+            $_SESSION['active-form'] = 'login';
+            header("Location: ../pages/auth/index.php");
             exit();
         }
     } catch (PDOException $e) {
-        error_log("Database error: " . $e->getMessage());
+        echo "Database error: " . $e->getMessage();
         $_SESSION['error_message'] = ['login' =>'Erreur serveur. Veuillez réessayer plus tard.'];
-        header("Location: ../auth/connexion.php");
+        header("Location: ../pages/auth/index.php");
         exit();
     }
 
@@ -41,7 +44,7 @@ if(isset($_POST['register-form'])) {
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    require_once '../config/db.inc.php';
+    require_once './config/db.inc.php';
 
     try {
         $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
@@ -49,7 +52,8 @@ if(isset($_POST['register-form'])) {
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
             $_SESSION['error_message'] = ['register' =>"Cet e-mail est déjà utilisé."];
-            header("Location: ../auth/connexion.php");
+            $_SESSION['active-form'] = 'register';
+            header("Location: ../pages/auth/index.php");
             exit();
         }
 
@@ -67,7 +71,7 @@ if(isset($_POST['register-form'])) {
     } catch (PDOException $e) {
         error_log("Database error: " . $e->getMessage());
         $_SESSION['error_message'] = ['register' =>"Cet e-mail est déjà utilisé."];
-        header("Location: ../auth/connexion.php");
+        header("Location: ../pages/auth/index.php");
         exit();
     }
 }
@@ -76,9 +80,9 @@ if(isset($_POST['logout'])) {
     
     session_unset();
     session_destroy();
-    header("Location: ../auth/connexion.php");
+    header("Location: ../pages/auth/index.php");
     exit();
 } else {
-    header("Location: ../auth/connexion.php");
+    header("Location: ../pages/auth/index.php");
     exit();
 }

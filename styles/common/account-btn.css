@@ -1,0 +1,65 @@
+/* ACCOUNT BTN AND ACCESS */
+.account-btn  {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    
+}
+
+.floater {
+    position: absolute;
+    /* border: 1px solid #01806a; */
+    box-shadow: 0 4px 12px var(--gray-light); 
+    top: 32px;
+    right: 0;
+    margin: 24px;
+    background-color: var(--light-clr);
+    width: 200px;
+    height: 180px;
+    border-radius: 6px;
+    z-index: -50;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    gap: 12px;
+}
+
+.floater form {
+    border-top: 1px solid var(--gray-light);
+    padding: 12px 0;
+}
+
+.floater .account-profile {
+    height: 48px;
+    width: 48px;
+    border-radius: 100%;
+    background-color: var(--green-light);
+
+}
+
+.floater .account-profile img {
+    filter: invert(1);
+}
+
+.floater .logout-btn {
+    background-color: #ffd6d6;
+    color: red;
+    border: none;
+}
+
+.floater .logout-btn:hover {
+    background-color: red;
+    color: #ffd6d6;
+}
+ .account-btn:hover .floater {
+    opacity: 1;
+    z-index: 50;
+}

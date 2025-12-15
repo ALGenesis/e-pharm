@@ -71,6 +71,7 @@ header button {
 .icon {
     height: 24px;
     width: 24px;
+    cursor: pointer;
 }
 
 

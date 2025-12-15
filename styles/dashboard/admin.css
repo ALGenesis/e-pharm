@@ -27,14 +27,32 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--light-clr); /* Arrière-plan très clair */
+    background-color: var(--light-clr); 
 
 }
 
+body h2, span {
+    color: var(--dark-clr);
+}
+
+.icon {
+    height: 24px;
+    width: 24px;
+}
+
 header {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 40px;
     display: flex;
+    justify-content: space-between;
+}
+
+header h2 {
+    color: var(--dark-clr);
+}
+
+a{
+    color: white;
 }
 
 #main-content {
@@ -48,12 +66,24 @@ header {
 .sidebar {
     width: 20%;
     height: 100vh;
-    background-color: var(--green);
+    background-color: var(--dark-clr);
     position: fixed;
 }
+ 
+.logo-container {
+    height: 10%;
+    /* border: 1px solid red; */
+    margin: 24px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.logo-container a {
+    color: var(--green);
+}
 .sidebar nav {
-    height: 100%;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;

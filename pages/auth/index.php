@@ -1,8 +1,9 @@
 <?php
-    require_once '../config/config.inc.php';
-    launchSession();
+    // require_once '../../includes/config/config.inc.php';
+    // launchSession();
+    session_start();
     if(isset($_SESSION['user_id'])) {
-        header('Location: ../index.php');
+        header('Location: ../../index.php');
     }
 
     if(isset($_SESSION['error_message'])) {
@@ -16,19 +17,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/index.css">
-    <link rel="stylesheet" href="../styles/common/index.responsive.css">
-    <link rel="stylesheet" href="../styles/common/animation.css">
-    <link rel="stylesheet" href="../styles/auth/auth.css">
+    <link rel="stylesheet" href="../../styles/index.css">
+    <link rel="stylesheet" href="../../styles/common/index.responsive.css">
+    <link rel="stylesheet" href="../../styles/common/animation.css">
+    <link rel="stylesheet" href="../../styles/auth/auth.css">
     <title>e-pharm | contact</title>
 </head>
 <body>
-    <script type="module" src="../script/toggleForm.js" defer></script>
+    <script type="module" src="../../script/toggleForm.js" defer></script>
     <!-- Main content -->
     <main>
         <section>
             <div class="contact-container">
-                <form action="./auth.inc.php" method="post" id="login" class="contact-form active">
+                <form action="../../includes/auth.inc.php" method="post" id="login" class="contact-form active">
                         <h2 class="form-title">Connexion</h2>
                         <?php
                             if(isset($error_message['login'])) {
@@ -52,7 +53,7 @@
 
                 </form>
 
-                <form action="./auth.inc.php" method="post" id="register" class="contact-form ">
+                <form action="../../includes/auth.inc.php" method="post" id="register" class="contact-form ">
                         <h2 class="form-title">Inscription</h2>
                         <?php
                             if(isset($error_message['register'])) {
@@ -87,7 +88,7 @@
 
                 <div class="contact-showcase">
                     <h1>e-pharm</h1>
-                    <img src="../assets/img/mobile-slide2.png" alt="">
+                    <img src="../../assets/img/mobile-slide2.png" alt="">
                 </div>
             </div>
         </section>
