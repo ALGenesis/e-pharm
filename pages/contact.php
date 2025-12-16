@@ -1,3 +1,7 @@
+<?php
+    require_once "../includes/utils/checkIfConnected.inc.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -41,10 +45,10 @@
             </div>
 
             <div class="account-btn flexed" >
-                <img src="../assets/icons/settings.svg" class="icon" alt="">
+                <img src="../assets/icons/circle-user.svg" class="icon" alt="">
                 <div class="floater">
                     <div class="account-profile flexed">
-                        <img src="../assets/icons/settings.svg" class="icon" alt="">
+                        <img src="../assets/icons/circle-user.svg" class="icon" alt="">
                     </div>
                     <span>example@email.com</span>
                     <form action="../includes/auth.inc.php" method="post">
