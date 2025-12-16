@@ -1,3 +1,7 @@
+:root {
+    --gray-light : #d7d7d7;
+};
+
 /* ACCOUNT BTN AND ACCESS */
 .account-btn  {
     /* background-color: red; */
@@ -19,7 +23,7 @@
     margin: 24px;
     background-color: var(--light-clr);
     width: 200px;
-    height: 180px;
+    height: auto;
     border-radius: 6px;
     z-index: -50;
     opacity: 0;
@@ -59,7 +63,9 @@
     background-color: red;
     color: #ffd6d6;
 }
- .account-btn:hover .floater {
+ .account-btn img:hover .floater {
     opacity: 1;
     z-index: 50;
 }
+
+

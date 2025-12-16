@@ -88,21 +88,21 @@
             <div id="product-list">
                 <template id="product-card-template">
                     <div class="product-card">
-                    <a href="../pages/produit.php" class="product-img">
-                        <img src="../assets/img/test-antigenique-sejoy-face-C.png" alt="">
-                    </a>
+                        <a href="../pages/produit.php" class="product-img">
+                            <img src="../assets/img/test-antigenique-sejoy-face-C.png" alt="">
+                        </a>
 
-                    <div class="product-details">
-                        <div class="content-column">
-                            <span class="product-name">Name</span>
-                            <span class="sub small-text product-info">Short description</span>
+                        <div class="product-details">
+                            <div class="content-column">
+                                <span class="product-name">Name</span>
+                                <span class="sub small-text product-info">Short description</span>
+                            </div>
+
+                            <span class="product-price">5.000 XAF</span>
                         </div>
 
-                        <span class="product-price">5.000 XAF</span>
+                        <button class="add-to-cart-btn">Add to cart</button>
                     </div>
-
-                    <button class="add-to-cart-btn">Add to cart</button>
-                </div>
                 </template>
                 
                    

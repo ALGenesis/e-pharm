@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../../styles/common/account-btn.css">
     <link rel="stylesheet" href="../../styles/common/animation.css">
     <link rel="stylesheet" href="../../styles/dashboard/admin.css">
+
     <title>e-pharm | dashboard</title>
 </head>
 <body>
@@ -28,32 +30,29 @@
         <main>
             <header>
                 <h2>Dashboard</h2>
-                <div>
+                <div class="account-btn flexed" >
                     <img src="../../assets/icons/settings.svg" class="icon" alt="">
+                    <div class="floater">
+                        <div class="account-profile flexed">
+                            <img src="../../assets/icons/settings.svg" class="icon" alt="">
+                        </div>
+                        <span>example@email.com</span>
+                        <span>super admin</span>
+                        <form action="../../includes/auth.inc.php" method="post">
+                            <button class="logout-btn" type="submit" name="logout">se déconnecter</button>
+                        </form>
+                        
+                    </div>
                 </div>
+            
             </header>
+
             <section id="summary">
                 <article class="summary-card">
                     
-                    <div class="summary-logo"> IMG</div>
-                    <div class="summary-text">
-                        <span class="sum-title" >Title</span>
-                        <span class="sum-sub-title">sub-title</span>
+                    <div class="summary-logo"> 
+                        <img src="../../assets/icons/settings.svg" class="icon" alt="">
                     </div>
-                    
-                </article>
-                <article class="summary-card">
-                    
-                    <div class="summary-logo"> IMG</div>
-                    <div class="summary-text">
-                        <span class="sum-title" >Title</span>
-                        <span class="sum-sub-title">sub-title</span>
-                    </div>
-                    
-                </article>
-                <article class="summary-card">
-                    
-                    <div class="summary-logo"> IMG</div>
                     <div class="summary-text">
                         <span class="sum-title" >Title</span>
                         <span class="sum-sub-title">sub-title</span>
@@ -63,13 +62,39 @@
 
                 <article class="summary-card">
                     
-                    <div class="summary-logo"> IMG</div>
+                    <div class="summary-logo"> 
+                        <img src="../../assets/icons/settings.svg" class="icon" alt="">
+                    </div>
                     <div class="summary-text">
                         <span class="sum-title" >Title</span>
                         <span class="sum-sub-title">sub-title</span>
                     </div>
                     
                 </article>
+                <article class="summary-card">
+                    
+                    <div class="summary-logo"> 
+                        <img src="../../assets/icons/settings.svg" class="icon" alt="">
+                    </div>
+                    <div class="summary-text">
+                        <span class="sum-title" >Title</span>
+                        <span class="sum-sub-title">sub-title</span>
+                    </div>
+                    
+                </article>
+                <article class="summary-card">
+                    
+                    <div class="summary-logo"> 
+                        <img src="../../assets/icons/settings.svg" class="icon" alt="">
+                    </div>
+                    <div class="summary-text">
+                        <span class="sum-title" >Title</span>
+                        <span class="sum-sub-title">sub-title</span>
+                    </div>
+                    
+                </article>
+
+                
                      
             </section>
 
