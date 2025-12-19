@@ -58,6 +58,11 @@ aside nav li img {
     filter: invert();
 }
 
+aside nav li.active {
+    background-color: var(--green-light);
+    opacity: 1;
+}
+
 aside nav li:hover {
     background-color: var(--green-light);
     opacity: 1;
@@ -69,16 +74,51 @@ main {
     right: 0;
     width: 78vw;
     height: 100%;
-    z-index: -50;
+    /* z-index: -50; */
 
 }
 
 section {
     width: 100%;
     height: auto;
+    display: none;
+    padding: 12px;
+}
+
+section.active {
     display: flex;
     align-items: center;
-    padding: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--light-clr);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--gray-light);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: var(--dark-clr);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+table tbody tr {
+    transition: all 0.4s ease;
+}
+
+table tbody tr:hover {
+    background-color: var(--green-light);
 }
 
 /* DASHBOARD */

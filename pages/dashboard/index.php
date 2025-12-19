@@ -16,6 +16,7 @@
 </head>
 <body>
     <script type="module" src="../../script/menu-burger.js" defer></script>
+    <script type="module" src="../../script/admin.index.js" defer></script>
     <!-- Header -->
     <header>
 
@@ -50,35 +51,35 @@
         <!-- Contenu spécifique à chaque page -->
          <aside>
             <nav>
-                <li>
+                <li data-target="dashboard" class="active">
                    <img src="../../assets/icons/layout-panel-left.svg" class="icon" alt="">
                    <span>Dashboard</span>
                 </li>
-                <li>
+                <li data-target="users">
                     <img src="../../assets/icons/users.svg" class="icon" alt="">
                     <span>utilisateurs</span>
                 </li>
-                <li>
+                <li data-target="entreprises">
                     <img src="../../assets/icons/briefcase-business.svg" class="icon" alt="">
                     <span>Pharmacies</span>
                 </li>
-                <li>
+                <li data-target="products">
                     <img src="../../assets/icons/pill-bottle.svg" class="icon" alt="">
                     <span>Produits</span>
                 </li>
-                <li>
+                <!-- <li data-target="categories">
                     <img src="../../assets/icons/list.svg" class="icon" alt="">
                     <span>Categories</span>
                 </li>
-                <li>
+                <li data-target="feedback">
                     <img src="../../assets/icons/message-square-warning.svg" class="icon" alt="">
                     <span>Feedback</span>
-                </li>
+                </li> -->
             </nav>
          </aside>
          <main>
             <!-- Overview -->
-            <section id="dashboard">
+            <section id="dashboard" class="active">
                 <div id="dashboard-summary">
                     <article class="summary-card">
                         <div class="card-wrapper">
@@ -125,7 +126,7 @@
                         </div>
                     </article>
                 </div>
-                <div id="dashboard-graph">
+                <!-- <div id="dashboard-graph">
                     <div class="sub-section-title">
                         <span>Analyse du traffic</span>
                         <select name="timeline" id="">
@@ -135,7 +136,7 @@
                             <option value="D">Aujourd'hui</option>
                         </select>
                     </div>
-                </div>
+                </div> -->
                 <div id="dashboard-customers">
                     <div class="customers-child">
                         <div class="sub-section-title">
@@ -174,7 +175,7 @@
                                     <img src="../../assets/icons/users.svg" class="icon" alt="">
                                 </div>
                                 <div class="list-item-text">
-                                    <span class="list-item-title">John doe</span>
+                                    <span class="list-item-title">Jane doe</span>
                                     <span class="list-item-sub-title">Johndoe@email.com</span>
                                 </div>
                                 <div class="list-item-link">
@@ -186,7 +187,7 @@
                                     <img src="../../assets/icons/users.svg" class="icon" alt="">
                                 </div>
                                 <div class="list-item-text">
-                                    <span class="list-item-title">John doe</span>
+                                    <span class="list-item-title">Bob doe</span>
                                     <span class="list-item-sub-title">Johndoe@email.com</span>
                                 </div>
                                 <div class="list-item-link">
@@ -198,7 +199,7 @@
                                     <img src="../../assets/icons/users.svg" class="icon" alt="">
                                 </div>
                                 <div class="list-item-text">
-                                    <span class="list-item-title">John doe</span>
+                                    <span class="list-item-title">Georges doe</span>
                                     <span class="list-item-sub-title">Johndoe@email.com</span>
                                 </div>
                                 <div class="list-item-link">
@@ -234,7 +235,7 @@
                                     <img src="../../assets/icons/briefcase-business.svg" class="icon" alt="">
                                 </div>
                                 <div class="list-item-text">
-                                    <span class="list-item-title">John doe</span>
+                                    <span class="list-item-title">Pharmacie 1</span>
                                     <span class="list-item-sub-title">Johndoe@email.com</span>
                                 </div>
                                 <div class="list-item-link">
@@ -246,7 +247,7 @@
                                     <img src="../../assets/icons/briefcase-business.svg" class="icon" alt="">
                                 </div>
                                 <div class="list-item-text">
-                                    <span class="list-item-title">John doe</span>
+                                    <span class="list-item-title">Pharmacie 2</span>
                                     <span class="list-item-sub-title">Johndoe@email.com</span>
                                 </div>
                                 <div class="list-item-link">
@@ -258,7 +259,7 @@
                                     <img src="../../assets/icons/briefcase-business.svg" class="icon" alt="">
                                 </div>
                                 <div class="list-item-text">
-                                    <span class="list-item-title">John doe</span>
+                                    <span class="list-item-title">Pharmacie 3</span>
                                     <span class="list-item-sub-title">Johndoe@email.com</span>
                                 </div>
                                 <div class="list-item-link">
@@ -270,7 +271,7 @@
                                     <img src="../../assets/icons/briefcase-business.svg" class="icon" alt="">
                                 </div>
                                 <div class="list-item-text">
-                                    <span class="list-item-title">John doe</span>
+                                    <span class="list-item-title">Pharmacie 4</span>
                                     <span class="list-item-sub-title">Johndoe@email.com</span>
                                 </div>
                                 <div class="list-item-link">
@@ -351,10 +352,121 @@
                 </div>
             </section>
             <!-- Autres pages -->
-            <section id="users"></section>
-            <section id="entreprises"></section>
-            <section id="products"></section>
-            <section id="feedback"></section>
+            <section id="users">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>nom</th>
+                            <th>email</th>
+                            <th>role</th>
+                            <th>crée le</th>
+                        </tr>
+                    </thead>
+                        <tr>
+                            <td>001</td>
+                            <td>John Doe</td>
+                            <td>johndoe@email.com</td>
+                            <td>user</td>
+                            <td>12/12/2025</td>
+                        </tr>
+                        <tr>
+                            <td>001</td>
+                            <td>John Doe</td>
+                            <td>johndoe@email.com</td>
+                            <td>user</td>
+                            <td>12/12/2025</td>
+                        </tr>
+                        <tr>
+                            <td>001</td>
+                            <td>John Doe</td>
+                            <td>johndoe@email.com</td>
+                            <td>user</td>
+                            <td>12/12/2025</td>
+                        </tr>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </section>
+            <section id="entreprises">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>nom</th>
+                            <th>email</th>
+                            <th>admin ID</th>
+                            <th>crée le</th>
+                        </tr>
+                    </thead>
+                        <tr>
+                            <td>001</td>
+                            <td>Pharmacie 01</td>
+                            <td>pharmacie@email.com</td>
+                            <td>001</td>
+                            <td>12/12/2025</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Pharmacie 02</td>
+                            <td>pharmacie@email.com</td>
+                            <td>001</td>
+                            <td>12/12/2025</td>
+                        </tr>
+                        <tr>
+                            <td>001</td>
+                            <td>Pharmacie 01</td>
+                            <td>pharmacie@email.com</td>
+                            <td>001</td>
+                            <td>12/12/2025</td>
+                        </tr>
+                       
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </section>
+            <section id="products">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>nom</th>
+                            <th>price</th>
+                            <th>crée par</th>
+                            <th>crée le</th>
+                        </tr>
+                    </thead>
+                        <tr>
+                            <td>001</td>
+                            <td>Aspirin</td>
+                            <td>5000</td>
+                            <td>001</td>
+                            <td>12/12/2025</td>
+                        </tr>
+                        <tr>
+                            <td>001</td>
+                            <td>Aspirin</td>
+                            <td>5000</td>
+                            <td>001</td>
+                            <td>12/12/2025</td>
+                        </tr>
+                        <tr>
+                            <td>001</td>
+                            <td>Aspirin</td>
+                            <td>5000</td>
+                            <td>001</td>
+                            <td>12/12/2025</td>
+                        </tr>
+                       
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </section>
+            <section id="categories">CATEGORIES</section>
+            <section id="feedback">Feedback</section>
             
          </main>
     </div>

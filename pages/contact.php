@@ -1,6 +1,4 @@
-<?php
-    require_once "../includes/utils/checkIfConnected.inc.php";
-?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -50,7 +48,10 @@
                     <div class="account-profile flexed">
                         <img src="../assets/icons/circle-user.svg" class="icon" alt="">
                     </div>
-                    <span>example@email.com</span>
+                    <span><?php if(isset($_SESSION['username'])) {
+                            $username = $_SESSION['username'];
+                            echo $username;
+                    }?></span>
                     <form action="../includes/auth.inc.php" method="post">
                         <button class="logout-btn" type="submit" name="logout">se déconnecter</button>
                     </form>

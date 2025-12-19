@@ -48,7 +48,12 @@
                     <div class="account-profile flexed">
                         <img src="./assets/icons/circle-user.svg" class="icon" alt="">
                     </div>
-                    <span>example@email.com</span>
+                    <span><?php if(isset($_SESSION['username'])) {
+                            $username = $_SESSION['username'];
+                            echo $username;
+                    }else {
+                        echo 'Pas de connexion !';
+                    }?> </span>
                     <form action="./includes/auth.inc.php" method="post">
                         <button class="logout-btn" type="submit" name="logout">se déconnecter</button>
                     </form>

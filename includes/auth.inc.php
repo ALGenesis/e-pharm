@@ -21,6 +21,15 @@ if (isset($_POST['login-form'])) {
         if ($user && password_verify($_POST['password'], $user['password'])) {
             
             $_SESSION['user_id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+
+            $_SESSION['role'] = $user['role'];
+
+            if(isset($_SESSION['role']) && $_SESSION['role'] === "admin") {
+                header("Location: ../pages/dashboard/index.php");
+                exit();
+            }
+
 
             header("Location: ../pages/catalogue.php");
             exit();
@@ -63,10 +72,7 @@ if(isset($_POST['register-form'])) {
         $stmt->bindParam(':password', $password);
         $stmt->execute();
 
-
-        $_SESSION['user_id'] = $pdo->lastInsertId();
-
-        header("Location: ../pages/catalogue.php");
+        header("Location: ../pages/auth/index.php");
         exit();
     } catch (PDOException $e) {
         error_log("Database error: " . $e->getMessage());
